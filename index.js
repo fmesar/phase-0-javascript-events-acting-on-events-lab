@@ -16,16 +16,20 @@ document.addEventListener("keydown", function (event) {
   function moveDodgerLeft() {
     const leftNumbers = dodger.style.left.replace("px", "");
     const left = parseInt(leftNumbers, 10);
-  
+  const color = dodger.style.backgroundColor.replace("#FF69B4",'');
+ 
     if (left > 0) {
-      dodger.style.left = `${left - 1}px`;
+      dodger.style.left = `${left - 8}px`;
+      dodger.style.backgroundColor = `rgb(${left * 3 + 10}, ${left * -2 }, ${left * 2})`
     }
   }
   function moveDodgerRight(){
     const leftNumbers = dodger.style.left.replace("px", "");
     const left = parseInt(leftNumbers, 10);
+    const color = dodger.style.backgroundColor.replace("#FF69B4",'');
   
     if (left > 0) {
-      dodger.style.left = `${left + 1}px`;
+      dodger.style.left = `${left + 8}px`;
+      dodger.style.backgroundColor = `rgb(${left / 3}, ${left + 2}, ${left - 7})`
     }
   }
